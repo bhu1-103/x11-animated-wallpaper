@@ -1,9 +1,11 @@
 CC = gcc
-CFLAGS = -02 -Wall -Wextra -std=c11
-LDFLLAGS = -lX11 -lGL
+CFLAGS = -O2 -Wall -Wextra -std=c11
+LDFLAGS = -lX11 -lGL
 
 SRC = src/main.c
-OUT = wallpaper
+OUT = build/wallpaper
+
+.PHONY: all clean
 
 all: $(OUT)
 

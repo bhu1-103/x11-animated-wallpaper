@@ -16,10 +16,16 @@ int main(int argc, char *argv[]) {
 
     while (1) {
         glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
+        glClear(GL_COLOR_BUFFER_BIT);
         glBegin(GL_LINES);
         // now i am free to do anything
+        // let's goooo
+        glColor4f(1.0f, 0.0f, 0.0f, 1.0f);
+        glVertex3f(-1.0f ,-1.0f ,+0.0f);
+        glVertex3f(+1.0f ,+1.0f ,+0.0f);
+        glVertex3f(+1.0f ,-1.0f ,+0.0f);
+        glVertex3f(-1.0f ,+1.0f ,+0.0f);
         glEnd();
-        glClear(GL_COLOR_BUFFER_BIT);
         glXSwapBuffers(dpy, win);
     }
 
