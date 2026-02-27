@@ -15,7 +15,7 @@ int main(int argc, char *argv[]) {
     glXMakeCurrent(dpy, win, glc);
 
     while (1) {
-        glClearColor(0.1f, 0.1f, 0.1f, 1.0f);
+        glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
         glBegin(GL_LINES);
         // now i am free to do anything
         glEnd();
