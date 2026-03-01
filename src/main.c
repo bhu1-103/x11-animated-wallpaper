@@ -47,17 +47,19 @@ int main(int argc, char *argv[]) {
 
         double frame_start = now_seconds();
         double dt = frame_start - last_time;
+        double val1;
         last_time = frame_start;
 
         glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT);
 
-        glBegin(GL_QUADS);
+        glLineWidth(5.0f);
+        glBegin(GL_LINES);
         glColor4f(1.0f, 0.0f, 0.0f, 1.0f);
-        glVertex3f(-1.0f, -1.0f, 0.0f);
-        glVertex3f( 1.0f,  1.0f, 0.0f);
-        glVertex3f( 1.0f, -1.0f, 0.0f);
-        glVertex3f(-1.0f,  1.0f, 0.0f);
+        if (val1>=1440) {val1=0;}
+        val1++;
+        glVertex3f( -(val1/360.0f), -1.0f, 0.0f);
+        glVertex3f( +(val1/360.0f),  1.0f, 0.0f);
         glEnd();
 
         glXSwapBuffers(dpy, win);
