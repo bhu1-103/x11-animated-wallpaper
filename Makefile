@@ -1,6 +1,6 @@
 CC = gcc
-CFLAGS = -O2 -Wall -Wextra -std=c11
-LDFLAGS = -lX11 -lGL
+CFLAGS = -O2 -Wall -Wextra -std=c11 -D_POSIX_C_SOURCE=200809L
+LDFLAGS = -lX11 -lGL -lm
 
 SRC = src/main.c
 OUT = build/wallpaper
